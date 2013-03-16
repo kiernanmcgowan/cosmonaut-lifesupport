@@ -1,5 +1,6 @@
 // index.js
-var buildFile = require('./build/cosmonaut-lifesupport');
-module.exports.three = buildFile.THREE;
-module.exports.threex = buildFile.THREEx;
-module.exports.physijs = buildFile.physijs;
+//var buildFile = require('./build/cosmonaut-lifesupport');
+
+// middle ware to serve up the file
+module.exports = __dirname + '/build/cosmonaut-lifesupport.js';
+
