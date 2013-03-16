@@ -9,8 +9,8 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['three.js/build/three.js', 'threex/threex.domevent.js', 'Physijs/physi.js'],
-        //
+        //src: ['three.js/build/three.js', 'threex/threex.domevent.js', 'threex/threex.domevent.object3d.js', 'Physijs/physi.js'],
+        src: ['three.js/build/three.js', 'threex/*.js', 'Physijs/physi.js'],
         dest: 'build/<%= pkg.name %>.js'
       }
     },
