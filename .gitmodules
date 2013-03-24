@@ -7,3 +7,6 @@
 [submodule "Physijs"]
 	path = Physijs
 	url = git@github.com:chandlerprall/Physijs.git
+[submodule "cannon.js"]
+	path = cannon.js
+	url = git@github.com:dropdownmenu/cannon.js.git
