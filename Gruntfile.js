@@ -11,7 +11,7 @@ module.exports = function(grunt) {
       dist: {
         //src: ['three.js/build/three.js', 'threex/threex.domevent.js', 'threex/threex.domevent.object3d.js', 'Physijs/physi.js'],
         src: [
-          // three's horrible build system
+          // three's build system
           'three.js/src/Three.js',
           'three.js/src/math/Color.js',
           'three.js/src/math/Quaternion.js',
@@ -156,9 +156,8 @@ module.exports = function(grunt) {
           'three.js/src/extras/renderers/plugins/DepthPassPlugin.js',
           'three.js/src/extras/shaders/ShaderFlares.js',
           'three.js/src/extras/shaders/ShaderSprite.js',
-          // threex
-          'threex/*.js',
-          'Physijs/physi.js'
+          // cannon
+          'cannon.js/build/cannon.js'
         ],
         dest: 'build/<%= pkg.name %>.js'
       }
@@ -180,15 +179,24 @@ module.exports = function(grunt) {
         src: 'build/<%= pkg.name %>.js',
         dest: 'build/<%= pkg.name %>.min.js'
       }
+    },
+    shell: {
+      gruntCannon: {
+        command: 'cd cannon.js/ && grunt && cd ..',
+        options: {
+          stdout: true
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-wrapper');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Default task(s).
-  grunt.registerTask('default', ['concat', 'wrap']);
-  grunt.registerTask('min', ['concat', 'wrap', 'uglify']);
+  grunt.registerTask('default', ['shell', 'concat']);
+  grunt.registerTask('min', ['shell', 'concat', 'uglify']);
 
 };
