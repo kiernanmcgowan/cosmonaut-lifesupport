@@ -1,9 +1,6 @@
 [submodule "three.js"]
 	path = three.js
 	url = git@github.com:dropdownmenu/three.js.git
-[submodule "threex"]
-	path = threex
-	url = git@github.com:dropdownmenu/threex.git
 [submodule "Physijs"]
 	path = Physijs
 	url = git@github.com:chandlerprall/Physijs.git
