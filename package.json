@@ -5,10 +5,10 @@
     
   },
   "devDependencies": {
-    "grunt": "0.4.x",
-    "grunt-contrib-concat": "0.1.x",
+    "grunt": "~1.0.1",
+    "grunt-contrib-concat": "~1.0.1",
     "grunt-wrapper": "0.0.x",
-    "grunt-contrib-uglify": "0.2.x",
-    "grunt-shell": "0.2.x"
+    "grunt-contrib-uglify": "~2.3.0",
+    "grunt-shell": "~2.1.0"
   }
 }
